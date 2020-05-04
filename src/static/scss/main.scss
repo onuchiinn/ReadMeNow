@@ -1,0 +1,134 @@
+@import "../../../node_modules/normalize.css/normalize";
+@import "../../../node_modules/slick-carousel/slick/slick";
+
+* {
+    font-family: "Roboto";
+}
+li,
+a {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.header {
+    background-color: #fff;
+    color: #000000;
+}
+.container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+}
+.header__title {
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-weight: 400;
+}
+.menu__list {
+    display: flex;
+    justify-content: space-between;
+    a {
+        color: #000000;
+    }
+    li + li {
+        margin-left: 40px;
+    }
+}
+
+.top {
+    background-color: #fff9ed;
+    height: 100%;
+}
+.top__inner {
+    padding-bottom: 125px;
+}
+.top__slider {
+    padding: 40px 50px 80px;
+}
+.top__slider__element {
+    background-image: url(../img/image2.jpg);
+    background-size: cover;
+    min-height: 574px;
+    opacity: 0.8;
+    &:hover {
+        opacity: 1;
+    }
+    &:nth-of-type(3) {
+        background-image: url(../img/image3.jpg);
+    }
+    &:nth-of-type(4) {
+        background-image: url(../img/image4.png);
+    }
+}
+.top__slider__element__title {
+    font-size: 200px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    margin-top: 180px;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.slick-dots {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    z-index: 5;
+    padding-inline-start: 0px;
+    margin-block-start: 10px;
+    margin-block-end: 0px;
+    li + li {
+        margin-left: 6px;
+    }
+}
+.slick-dots button {
+    border: none;
+    background-color: #a3dde1;
+    font-size: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    margin: 10px auto;
+    display: block;
+}
+
+.top__button {
+    background-color: #a3dde1;
+    border: none;
+    border-radius: 34px;
+    width: 250px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    margin: 0 auto;
+    a {
+        color: #ffffff;
+    }
+}
+
+.footer {
+    background-color: #f7f7f7;
+}
+.footer__inner {
+}
+.footer__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    height: 50px;
+    letter-spacing: 3px;
+}
