@@ -1,55 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>READMENOW</title>
   <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
   <header class="header">
     <div class="container">
       <div class="header__inner">
-        <h1 class="header__title">READMENOW</h1>
+        <a href="/"><h1 class="header__title">READMENOW</h1></a>
         <nav class="menu__list">
           <li><a href="/good-books">ХОРОШИЕ КНИГИ</a></li>
           <li><a href="/want-to-read">ХОЧУ ПОЧИТАТЬ</a></li>
+          <li>
+            <button id="button-auth">ВОЙТИ В ЛИЧНЫЙ КАБИНЕТ</button>
+          </li>
         </nav>
       </div>
     </div>
   </header>
-<section class="top">
-  <div class="container">
-    <div class="top__inner">
-      <div class="top__slider">
-        <div class="top__slider__element">
-          <div class="top__slider__element__title">
-            КНИГИ
+  <section class="top">
+    <div class="container">
+      <div class="top__inner">
+        <div class="top__slider">
+          <div class="top__slider__element">
+            <div class="top__slider__element__title">
+              КНИГИ
+            </div>
+          </div>
+          <div class="top__slider__element">
+            <div class="top__slider__element__title">
+              МЕМЫ
+            </div>
+          </div>
+          <div class="top__slider__element">
+            <div class="top__slider__element__title">
+              ГЭГИ
+            </div>
           </div>
         </div>
-        <div class="top__slider__element">
-          <div class="top__slider__element__title">
-            МЕМЫ
-          </div>
-        </div>
-        <div class="top__slider__element">
-          <div class="top__slider__element__title">
-            ГЭГИ
-          </div>
-        </div>
+        <button class="top__button"><a href="#">ЧИТАТЬ</a></button>
       </div>
-      <button class="top__button"><a href="#">ЧИТАТЬ</a></button>
+    </div>
+  </section>
+  <section class="books">
+    <div class="container">
+      <div class="books__inner">
+      </div>
+    </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__title">2020</div>
+      </div>
+    </div>
+    </div>
+  </footer>
+  <div class="modal-auth">
+    <div class="modal-dialog">
+      <button class="close-auth">X</button>
+      <form id="logInForm">
+        <fieldset class="modal-body">
+          <legend class="modal-title">Авторизация</legend>
+          <label class="label-auth">
+            <span>Логин</span>
+            <input id="login" type="text">
+          </label>
+          <label class="label-auth">
+            <span>Пароль</span>
+            <input id="password" type="password">
+          </label>
+        </fieldset>
+        <input id="send-auth" type="submit">
+      </form>
     </div>
   </div>
-</section>
-<footer class="footer">
-  <div class="container">
-    <div class="footer__inner">
-      <div class="footer__title">2020</div>
-    </div>
-  </div>
-</footer>
   <script src="static/js/libs.min.js"></script>
   <script src="static/js/main.js"></script>
 </body>
+
 </html>

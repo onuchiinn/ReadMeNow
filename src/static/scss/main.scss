@@ -8,6 +8,11 @@ li,
 a {
     text-decoration: none;
     list-style-type: none;
+    color: #000000;;
+}
+
+.hidden {
+    display: none;
 }
 
 .header {
@@ -34,11 +39,17 @@ a {
 .menu__list {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     a {
         color: #000000;
     }
     li + li {
         margin-left: 40px;
+    }
+    button {
+        border: none;
+        background-color: #59eebc;
+        padding: 6px;
     }
 }
 
@@ -49,6 +60,7 @@ a {
 .top__inner {
     padding-bottom: 125px;
 }
+
 .top__slider {
     padding: 40px 50px 80px;
 }
@@ -118,6 +130,59 @@ a {
         color: #ffffff;
     }
 }
+.books {
+    display: none;
+    background-color: #fff9ed;
+    height: 100%;
+}
+.books__inner {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 25px;
+    justify-items: center;
+}
+.card {
+    max-height: 650px;
+    max-width: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.card-image {
+    max-height: 300px;
+}
+.card-text {
+    display: flex;
+    flex-direction: column;
+        align-items: center;
+}
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+.card-autor {
+    margin: 5px 0;
+}
+.card-more {
+    display: flex;
+    align-items: center;
+}
+.card-rating {
+    background-image: url("../img/rating.svg");
+    background-repeat: no-repeat;
+    background-position: 0 7px;
+    padding-left: 20px;
+    font-size: 18px;
+    line-height: 32px;
+}
+.card-genre {
+}
+.button-add-cart {
+    margin-top: 10px;
+    max-width: 160px;
+}
 
 .footer {
     background-color: #f7f7f7;
@@ -131,4 +196,51 @@ a {
     font-size: 10px;
     height: 50px;
     letter-spacing: 3px;
+}
+
+.modal-auth {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+}
+
+.modal-dialog {
+    max-width: 450px;
+    width: 95%;
+    background: #ffffff;
+    border-radius: 5px;
+    margin: auto;
+    padding: 40px 45px;
+    position: relative;
+}
+.close-auth {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.modal-body {
+    margin: 40px 20px;
+}
+.modal-title {
+    font-size: 32px;
+    font-weight: 600;
+}
+.label-auth {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+    span {
+        margin-right: 50px;
+    }
+    input {
+        margin-left: 40px;
+    }
+    input + input {
+        margin-bottom: 10px;
+    }
 }

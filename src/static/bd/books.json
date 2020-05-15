@@ -1,0 +1,59 @@
+[
+    {
+      "name": "Сияние",
+      "author": "С. Кинг",
+      "genre": "Зарубежная литература",
+      "stars": 4.1,
+      "image": "img/covers/shine.jpeg"
+    },
+    {
+      "name": "Мертвые души",
+      "author": "Н.В. Гоголь",
+      "genre": "Русская классика",
+      "stars": 4.4,
+      "image": "img/covers/dead.jpg"
+    },
+    {
+      "name": "Мартин Иден",
+      "author": "Д. Лондон",
+      "genre": "Зарубежная литература",
+      "stars": 4.7,
+      "image": "img/covers/martin-iden.jpg"
+    },
+    {
+      "name": "Вся королевская рать",
+      "author": "Р.П. Уоренн",
+      "genre": "Зарубежная литература",
+      "stars": 4.5,
+      "image": "img/covers/All-the-King's-Men.jpeg"
+    },
+    {
+      "name": "Дневник информационного террориста",
+      "author": "С. Минаев",
+      "genre": "Русская современная",
+      "stars": 4.4,
+      "image": "img/covers/media-sapiens2.jpg"
+    },
+    {
+      "name": "Зима тревоги нашей",
+      "author": "Д. Стейнбек",
+      "genre": "Зарубежная литература",
+      "stars": 4.4,
+      "image": "img/covers/the_winter_of_our_discontent.jpeg"
+    },
+    {
+      "name": "Богатый папа бедный папа",
+      "author": "Р. Киосаки",
+      "genre": "Бизнес литература",
+      "stars": 4.6,
+      "image": "img/covers/rich-dad-poor-dad.jpg"
+    },
+    {
+      "name": "Заводной апельсин",
+      "author": "Э. Бёрджесс",
+      "genre": "Зарубежная литература",
+      "stars": 4.2,
+      "image": "img/covers/a-clockwork-orange.jpg"
+    }
+  ]
+  
