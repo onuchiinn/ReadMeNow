@@ -12,12 +12,16 @@
   <header class="header">
     <div class="container">
       <div class="header__inner">
-        <a href="/"><h1 class="header__title">READMENOW</h1></a>
+        <a href="/">
+          <h1 class="header__title">READMENOW</h1>
+        </a>
         <nav class="menu__list">
-          <li><a href="/good-books">ХОРОШИЕ КНИГИ</a></li>
-          <li><a href="/want-to-read">ХОЧУ ПОЧИТАТЬ</a></li>
+          <li><a id="good-books" href="#">ХОРОШИЕ КНИГИ</a></li>
+          <li><a href="#">ХОЧУ ПОЧИТАТЬ</a></li>
+          <li><a href="#" id="profile-name"></a></li>
           <li>
             <button id="button-auth">ВОЙТИ В ЛИЧНЫЙ КАБИНЕТ</button>
+            <button id="button-out">ВЫЙТИ</button>
           </li>
         </nav>
       </div>
@@ -70,11 +74,11 @@
           <legend class="modal-title">Авторизация</legend>
           <label class="label-auth">
             <span>Логин</span>
-            <input id="login" type="text">
+            <input id="login" type="text" placeholder="">
           </label>
           <label class="label-auth">
             <span>Пароль</span>
-            <input id="password" type="password">
+            <input id="password" type="password" placeholder="">
           </label>
         </fieldset>
         <input id="send-auth" type="submit">

@@ -1,7 +1,9 @@
 module.exports = function () {
     $.gulp.task('scripts:lib', function () {
         return $.gulp.src(['node_modules/jquery/dist/jquery.min.js',
-            'node_modules/slick-carousel/slick/slick.min.js'])
+            'node_modules/slick-carousel/slick/slick.min.js',
+            'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
+        ])
             .pipe($.gp.concat('libs.min.js'))
             .pipe($.gulp.dest('build/static/js/'))
             .pipe($.bs.reload({
