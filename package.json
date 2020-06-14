@@ -1,28 +1,33 @@
 {
-  "name": "gulpstart2",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "readmenow",
+  "version": "0.1.0",
+  "private": false,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^7.1.0",
-    "gulp-load-plugins": "^2.0.3",
-    "gulp-pug": "^4.0.1",
-    "gulp-sass": "^4.1.0",
-    "gulp-uglify": "^3.0.2",
-    "jquery": "^3.5.0",
-    "magnific-popup": "^1.1.0"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "browser-sync": "^2.26.7",
+    "core-js": "^3.6.5",
+    "pug": "^3.0.0",
+    "pug-loader": "^2.4.0",
+    "pug-plain-loader": "^1.0.0",
+    "register-service-worker": "^1.7.1",
+    "swiper": "^5.4.3",
+    "vue": "^2.6.11",
+    "vue-router": "^3.2.0",
+    "vuex": "^3.4.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.4.0",
+    "@vue/cli-plugin-pwa": "~4.4.0",
+    "@vue/cli-plugin-router": "~4.4.0",
+    "@vue/cli-plugin-vuex": "~4.4.0",
+    "@vue/cli-service": "~4.4.0",
+    "babel-eslint": "^10.1.0",
+    "node-sass": "^4.12.0",
     "normalize.css": "^8.0.1",
-    "slick-carousel": "^1.8.1"
+    "sass-loader": "^8.0.2",
+    "vue-template-compiler": "^2.6.11"
   }
 }
