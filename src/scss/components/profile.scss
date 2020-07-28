@@ -1,0 +1,14 @@
+@use "../utils/vars" as *;
+@use "../utils/mixins" as *;
+
+.profile{
+  display: flex;
+  flex-grow: 1;
+  &__wrapper{
+    @include flex(row,sb,c);
+    flex-grow: 1;
+  }
+  &__column{    
+    @include flex(col,fs,fs);
+  }
+}

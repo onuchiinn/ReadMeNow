@@ -1,0 +1,32 @@
+# dependencies
+node_modules
+
+# production
+build
+
+# misc
+.DS_Store
+
+.idea
+npm-debug.log
+yarn-error.log
+yarn.lock
+.yarnclean
+.vscode
+
+public/admin/node_modules
+
+public/data/*
+!public/data/.gitkeep
+
+public/admin/pl/*
+!public/admin/pl/.gitkeep
+
+syncthing/*
+!syncthing/.gitkeep
+
+public/cache/*
+!public/cache/.gitkeep
+
+Sync/*
+!Sync/.gitkeep

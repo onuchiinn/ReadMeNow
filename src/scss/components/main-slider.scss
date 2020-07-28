@@ -1,0 +1,40 @@
+@use "../utils/vars" as *;
+
+.main-slider {
+	&__slide {
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		min-height: 574px;
+		opacity: 0.8;
+    &:hover {
+        opacity: 1;
+    }
+	}
+	&__title {
+		font-size: 200px;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    padding-top: 180px;
+    text-shadow: 2px 2px 4px $black;
+	}
+	&__pagination {
+		display: flex;
+		align-items: center;
+    justify-content: center;
+		margin: 10px auto;
+		&-bullet {
+		width: 14px;
+		height: 14px;
+		border-radius: 10px;
+		border: none;
+		background-color: #a3dde1;
+		margin: 0 4px;
+		&-active {
+			width: 18px;
+			height: 18px;
+		}
+		}
+	}
+}

@@ -1,0 +1,24 @@
+.header {
+	padding: 35px 0;
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__logo {
+		font-size: 30px;
+    letter-spacing: 5px;
+		font-weight: 400;
+		padding-right: 60px;
+	}
+}
+
+.menu {
+	display: flex;
+	justify-content: space-between;
+	flex-grow: 1;
+	&__auth {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+	}
+}
