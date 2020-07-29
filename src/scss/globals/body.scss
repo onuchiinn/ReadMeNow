@@ -1,4 +1,7 @@
 body {
 	display: flex;
 	flex-direction: column;
+	font-family: $font-main;
+	font-weight: $font-normal;
+	font-size: $font-size-root;
 }

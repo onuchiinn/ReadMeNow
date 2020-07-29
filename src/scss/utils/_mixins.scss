@@ -39,5 +39,9 @@
       align-items: $a;
   }
 
+  @if $w == w {
+    flex-wrap: wrap;
+} @else {
   flex-wrap: $w;
+}
 }

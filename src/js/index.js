@@ -1,4 +1,4 @@
-// import './libs/icons';
+import './libs/icons';
 // import "./libs/lazyimages";
 // import './styles';
 import "../scss/index.scss";

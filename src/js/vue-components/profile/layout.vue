@@ -1,14 +1,15 @@
 <template lang="pug">
 section.profile
   .profile__wrapper.container
-    .profile__column
-      .profile__logo МОЯ АВАТАРКА
+    .profile__info
+      img(:src="userPhoto" alt="profile-photo").profile__logo
       .profile__name Иванов И.И.
       ul.profile__menu
-        li МОИ КНИГИ
-        li СПИСОК ЖЕЛАЕМОГО
-    .profile__column
-      profileBooks
+        li
+          a(href="#") МОИ КНИГИ
+        li
+          a(href="#") СПИСОК ЖЕЛАЕМОГО
+    profileBooks
 </template>
 
 <script>
@@ -19,7 +20,10 @@ export default {
       profileBooks
     },
     data() {
-        return {};
+        return {
+          // eslint-disable-next-line global-require
+          userPhoto: require('../../../images/avatar.png')
+        };
     },
     methods: {
     },

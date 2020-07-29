@@ -2,8 +2,8 @@
 .cardbook
   a(href="#").cardbook__link
     img(:src="cardbookImg" alt="cardbook-img").cardbook__img
-  .cardbook__author Р.П. Уоррен
-  a(href="#").cardbook__title Вся королевская рать
+  .cardbook__author Автор книги
+  a(href="#").cardbook__title Название книги
 </template>
 
 <script>
@@ -14,7 +14,7 @@ export default {
     data() {
         return {
             // eslint-disable-next-line global-require
-            cardbookImg: require('../../../images/cardbookImg.jpeg')
+            cardbookImg: require('../../../images/newBook.png')
         };
     },
     methods: {

@@ -5,10 +5,26 @@
   display: flex;
   flex-grow: 1;
   &__wrapper{
-    @include flex(row,sb,c);
+    @include flex(row,sb,fs);
     flex-grow: 1;
+    padding: 50px 0;
   }
-  &__column{    
-    @include flex(col,fs,fs);
+  &__info{    
+    @include flex(col,fs,c);
+    width: 20%;
+  }
+  &__logo{
+    width: 200px;
+    height: 200px;
+  }
+  &__name{
+    font-size: $font-size-m;
+    font-weight: $font-semibold;
+    padding: 10px 0px;
+  }
+  &__books{
+    @include flex(row,sb,c,w);
+    flex-grow: 1;
+    padding-left: 100px;
   }
 }
