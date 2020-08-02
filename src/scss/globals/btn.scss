@@ -1,0 +1,33 @@
+.btn{
+  display: inline-block;
+  position: relative;
+  padding: 10px 20px;
+  text-align: center;
+  // align-items: center;
+  vertical-align: middle;
+  color: $black;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  font-family: $font-main;
+  font-size: $font-size-base;
+  transition: color .2s ease-in-out,
+    background-color .2s ease-in-out,
+    border-color .2s ease-in-out,
+    box-shadow .2s ease-in-out;
+  &:hover{
+    color: $white;
+  }
+  
+  &__icon {
+    width: 20px;
+    height: 20px;
+    fill: $black;
+    vertical-align: middle;
+    transition: fill .2s ease-in-out;
+
+    &_white {
+        fill: $white;
+    }
+}
+}

@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { storeProfilePage } from './store';
+import storeAuth from './store/auth'
+import './config/api'
 import "./libs/icons"
 import "../scss/profile.scss"
 import profile from "./vue-components/profile"
@@ -9,6 +10,10 @@ import profile from "./vue-components/profile"
 
 Vue.use(Vuex)
 
-const store = new Vuex.Store(storeProfilePage)
+const store = new Vuex.Store({
+  modules: {
+      auth: storeAuth,
+  }
+});
 
 profile('#vue-profile', store)
