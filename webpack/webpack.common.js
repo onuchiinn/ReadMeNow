@@ -28,22 +28,22 @@ module.exports = {
             chunks: "all",
             name: false,
 
-            cacheGroups: {
-                globalStyle: {
-                    name: 'global',
-                    test: /.[\\/]globals[\\/]index.scss/,
-                },
-                nodeModules: {
-                    test: /[\\/]node_modules[\\/]/,
-                    priority: -10,
-                    enforce: true,
-                },
-                default: {
-                    minChunks: 2,
-                    priority: -20,
-                    reuseExistingChunk: true,
-                },
-            },
+            // cacheGroups: {
+            //     globalStyle: {
+            //         name: 'global',
+            //         test: /.[\\/]globals[\\/]index.scss/,
+            //     },
+            //     nodeModules: {
+            //         test: /[\\/]node_modules[\\/]/,
+            //         priority: -10,
+            //         enforce: true,
+            //     },
+            //     default: {
+            //         minChunks: 2,
+            //         priority: -20,
+            //         reuseExistingChunk: true,
+            //     },
+            // },
 
             /* maxInitialRequests: Infinity,
             minSize: 0,
@@ -156,10 +156,10 @@ module.exports = {
                 use: [
                     {
                         loader: "svg-sprite-loader",
-                        /* options: {
+                        options: {
                             extract       : true,
                             spriteFilename: 'icons/icons.svg',
-                        } */
+                        }
                     },
                     {
                         loader: "svgo-loader",

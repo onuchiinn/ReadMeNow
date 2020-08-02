@@ -1,0 +1,15 @@
+.input {
+  border-radius: 5px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  background-color: $white;
+  padding: 10px 20px;
+  width: 100%;
+  color: $black;
+  // font-size: $font-size-sm;
+
+  &::placeholder {
+      opacity: 1;
+      color: $black;
+      // font-size: $font-size-sm;
+  }
+}
