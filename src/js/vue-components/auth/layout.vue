@@ -13,23 +13,31 @@
 </template>
 
 <script>
-// import auth from '../../libs/auth';
+import { mapActions } from "vuex";
+import firebase from "firebase/app";
 
 export default {
-    data() {
-      return {
-        email: '',
-        password: ''
-      };
-    },
-    methods: {
-      sendData(e) {
-        e.preventDefault()
-        // eslint-disable-next-line no-unused-expressions
-        console.log(this.email)
-        console.log(this.password)
-        // auth(this.email,this.password)
-      }
-    },
-}
+ data() {
+  return {
+   email: "",
+   password: ""
+  };
+ },
+ methods: {
+  ...mapActions("auth", [
+    
+  ]),
+  async sendData(e) {
+   e.preventDefault();
+   try {
+    await firebase.auth().signInWithEmailAndPassword(this.email, this.password);
+    this.$store.commit("auth/SET_LOGIN", firebase.auth().currentUser.email);
+    console.log("SUCCESS!");
+    window.location.href = "/profile.html";
+   } catch (e) {
+    throw e;
+   }
+  }
+ }
+};
 </script>
