@@ -10,22 +10,6 @@ module.exports = merge(common, {
         chunkFilename: 'js/[name].chunk.js'
     },
     devServer  : {
-        // https: true,
-        // port   : 3000,
-        // host: "0.0.0.0",
-        // inline : true,
-        // proxy: [
-        //     {
-        //         context: ['/api', '/data', "/favicons", "/filters.json"],
-        //         target: "https://knife-museum.1mcg.ru/",
-        //         changeOrigin: true,
-        //         withCredentials: true,
-        //     },
-        // ],
-        overlay: {
-            warnings: true,
-            errors  : true
-        }
     },
     plugins    : [
         new Webpack.DefinePlugin({
