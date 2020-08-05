@@ -1,9 +1,10 @@
+@use "../utils/vars" as *;
+@use "../utils/mixins" as *;
+
 .header {
 	padding: 35px 0;
 	&__inner {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		@include flex(row,sb,c);
 	}
 	&__logo {
 		font-size: 30px;
@@ -14,12 +15,8 @@
 }
 
 .menu {
-	display: flex;
-	justify-content: space-between;
+	@include flex(row,sb,c);
 	flex-grow: 1;
 	&__auth {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-end;
 	}
 }

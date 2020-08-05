@@ -32,8 +32,9 @@ export default {
    try {
     await firebase.auth().signInWithEmailAndPassword(this.email, this.password);
     this.$store.commit("auth/SET_LOGIN", firebase.auth().currentUser.email);
-    console.log("SUCCESS!");
-    window.location.href = "/profile.html";
+    console.log(firebase.auth().currentUser)
+    console.log("SUCCESS!")
+    // window.location.href = "/profile.html";
    } catch (e) {
     throw e;
    }

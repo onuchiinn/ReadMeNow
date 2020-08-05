@@ -11,12 +11,13 @@
   border: 1px solid transparent;
   font-family: $font-main;
   font-size: $font-size-base;
-  transition: color .2s ease-in-out,
-    background-color .2s ease-in-out,
-    border-color .2s ease-in-out,
-    box-shadow .2s ease-in-out;
+  transition: color .3s ease-in-out,
+    background-color .3s ease-in-out,
+    border-color .3s ease-in-out,
+    box-shadow .3s ease-in-out;
   &:hover{
     color: $white;
+    background: $color-link;
   }
   
   &__icon {

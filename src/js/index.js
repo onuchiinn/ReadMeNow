@@ -10,10 +10,6 @@ import header from './libs/header';
 
 
 
-
-
-
-
 Vue.use(Vuex);
 
 const store = new Vuex.Store({
