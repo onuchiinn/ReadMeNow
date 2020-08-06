@@ -13,8 +13,7 @@ export default {
     },
     data() {
         return {
-            // eslint-disable-next-line global-require
-            cardbookImg: require('../../../images/newBook.png')
+          cardbookImg: require('../../../images/newBook.png')
         };
     },
     methods: {

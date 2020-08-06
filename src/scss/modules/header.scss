@@ -18,5 +18,14 @@
 	@include flex(row,sb,c);
 	flex-grow: 1;
 	&__auth {
+
+	&-login{
+		color:$color-link;
+		font-weight: $font-semibold;
 	}
+	&-logout{
+		font-weight: $font-normal;
+		margin-left: 10px;
+	}
+}
 }

@@ -2,8 +2,10 @@ import Vue from "vue";
 import cModal from "../vue-components/modal/modal.vue";
 import cAuth from "../vue-components/auth/layout.vue"
 
+import { mapGetters, mapActions } from 'vuex';
+
 export default (store) => {
-    // eslint-disable-next-line no-new
+
     new Vue({
         el: "#header",
         store,
@@ -12,20 +14,26 @@ export default (store) => {
             cAuth,
         },
         data: {
-            modalAuth: false
+            modalAuth: false,
         },
         methods: {
-            openModalAuth() {
-                if (this.$store.getters["auth/getUser"]) {
-                window.location.href = "/lk";
-                return;
-                };
-                this.modalAuth = true;
-            },
+            ...mapActions("auth", [
+                "statusUser", "logOut"
+            ]),
+            // openModalAuth() {
+            //     this.modalAuth = true;
+            // },
             modalAuthToggle() {
                 this.modalAuth = !this.modalAuth
-            }      
+            },
         },
+        computed: {
+            ...mapGetters("auth",
+                ["checkUser", "getUser"]),
+        },
+        created() {
+            this.statusUser()
+        }
     });
 };
 

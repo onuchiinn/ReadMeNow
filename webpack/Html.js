@@ -1,11 +1,9 @@
 const path              = require('path');
 const fs                = require('fs');
-// eslint-disable-next-line import/no-extraneous-dependencies
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = class Html {
     static PATH = path.resolve(__dirname, '../src/pug/pages');
-    // eslint-disable-next-line lines-between-class-members
     static EXT = '.pug';
 
     static create() {

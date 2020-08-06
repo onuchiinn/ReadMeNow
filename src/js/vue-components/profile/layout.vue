@@ -3,7 +3,7 @@ section.profile
   .profile__wrapper.container
     .profile__info
       img(:src="userPhoto" alt="profile-photo").profile__logo
-      .profile__name {{this.auth/getUser}}
+      .profile__name User
       ul.profile__menu
         li
           a(href="#") МОИ КНИГИ
