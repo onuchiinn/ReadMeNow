@@ -1,6 +1,7 @@
 import Vue from "vue";
 import cModal from "../vue-components/modal/modal.vue";
-import cAuth from "../vue-components/auth/layout.vue"
+import cAuth from "../vue-components/auth/layout.vue";
+import cRegistration from "../vue-components/registration/layout.vue"
 
 import { mapGetters, mapActions } from 'vuex';
 
@@ -12,9 +13,11 @@ export default (store) => {
         components: {
             cModal,
             cAuth,
+            cRegistration,
         },
         data: {
             modalAuth: false,
+            modalReg: false,
         },
         methods: {
             ...mapActions("auth", [
@@ -25,6 +28,9 @@ export default (store) => {
             // },
             modalAuthToggle() {
                 this.modalAuth = !this.modalAuth
+            },
+            modalRegToggle() {
+                this.modalReg = !this.modalReg
             },
         },
         computed: {

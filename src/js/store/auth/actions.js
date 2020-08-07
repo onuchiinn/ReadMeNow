@@ -24,6 +24,16 @@ export default {
   async logOut({commit}) {
     await firebase.auth().signOut()
     commit('CLEAR_LOGIN')
-  }
+  },
+
+  async regUser({dispatch}, {email, password}) {
+    try {
+      await firebase.auth().createUserWithEmailAndPassword(email, password)
+      console.log(`Успешная регистрация пользователя: ${email} `)
+      dispatch('logOut')
+    } catch (error) {
+      throw error
+    }
+  },
 
 }

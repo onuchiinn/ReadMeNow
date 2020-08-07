@@ -8,9 +8,12 @@ header.header#header
           a#good-books(href='#').btn ХОРОШИЕ КНИГИ
         li
           a(href='#').btn НОВИНКИ
+        li.menu__auth(v-if="checkUser" @click="modalRegToggle").btn РЕГИСТРАЦИЯ
         li.menu__auth(v-if="checkUser" @click="modalAuthToggle").btn ВОЙТИ В ЛИЧНЫЙ КАБИНЕТ
         li.menu__auth-login(v-else) {{getUser.email}}
           span.menu__auth-logout.btn(v-if="!checkUser" @click="logOut") ВЫЙТИ
     c-modal(:open="modalAuth" @click="modalAuthToggle")
       c-auth(@close="modalAuthToggle")
+    c-modal(:open="modalReg" @click="modalRegToggle")
+      c-registration(@close="modalRegToggle")
       
