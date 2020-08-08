@@ -1,31 +1,45 @@
 import Vue from "vue";
 import cModal from "../vue-components/modal/modal.vue";
-import cAuth from "../vue-components/auth/layout.vue"
+import cAuth from "../vue-components/auth/layout.vue";
+import cRegistration from "../vue-components/registration/layout.vue"
+
+import { mapGetters, mapActions } from 'vuex';
 
 export default (store) => {
-    // eslint-disable-next-line no-new
+
     new Vue({
         el: "#header",
         store,
         components: {
             cModal,
             cAuth,
+            cRegistration,
         },
         data: {
-            modalAuth: false
+            modalAuth: false,
+            modalReg: false,
         },
         methods: {
-            openModalAuth() {
-                if (this.$store.getters["auth/getUser"]) {
-                window.location.href = "/lk";
-                return;
-                };
-                this.modalAuth = true;
-            },
+            ...mapActions("auth", [
+                "statusUser", "logOut"
+            ]),
+            // openModalAuth() {
+            //     this.modalAuth = true;
+            // },
             modalAuthToggle() {
                 this.modalAuth = !this.modalAuth
-            }      
+            },
+            modalRegToggle() {
+                this.modalReg = !this.modalReg
+            },
         },
+        computed: {
+            ...mapGetters("auth",
+                ["checkUser", "getUser"]),
+        },
+        created() {
+            this.statusUser()
+        }
     });
 };
 

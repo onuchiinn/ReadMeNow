@@ -5,12 +5,15 @@ header.header#header
         .header__title READMENOW
       nav.menu
         li
-          a#good-books(href='#') ХОРОШИЕ КНИГИ
+          a#good-books(href='#').btn ХОРОШИЕ КНИГИ
         li
-          a(href='#') НОВИНКИ
-        //- li
-        //-   a#profile-name(href='profile.html')
-        li.menu__auth(@click="openModalAuth") ВОЙТИ В ЛИЧНЫЙ КАБИНЕТ
+          a(href='#').btn НОВИНКИ
+        li.menu__auth(v-if="checkUser" @click="modalRegToggle").btn РЕГИСТРАЦИЯ
+        li.menu__auth(v-if="checkUser" @click="modalAuthToggle").btn ВОЙТИ В ЛИЧНЫЙ КАБИНЕТ
+        li.menu__auth-login(v-else) {{getUser.email}}
+          span.menu__auth-logout.btn(v-if="!checkUser" @click="logOut") ВЫЙТИ
     c-modal(:open="modalAuth" @click="modalAuthToggle")
       c-auth(@close="modalAuthToggle")
+    c-modal(:open="modalReg" @click="modalRegToggle")
+      c-registration(@close="modalRegToggle")
       

@@ -12,7 +12,6 @@ const mainSlider = new Swiper('.main-slider__container', {
 		clickable: true,
 		bulletClass: 'main-slider__pagination-bullet',
 		bulletActiveClass: 'main-slider__pagination-bullet-active',
-		parallax:true
   },
 });
 

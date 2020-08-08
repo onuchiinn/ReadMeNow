@@ -3,7 +3,7 @@ section.profile
   .profile__wrapper.container
     .profile__info
       img(:src="userPhoto" alt="profile-photo").profile__logo
-      .profile__name Иванов И.И.
+      .profile__name User
       ul.profile__menu
         li
           a(href="#") МОИ КНИГИ
@@ -14,6 +14,7 @@ section.profile
 
 <script>
 import profileBooks from './profile-books.vue'
+import {mapActions, mapGetters} from 'vuex'
 
 export default {
     components: {
@@ -21,13 +22,15 @@ export default {
     },
     data() {
         return {
-          // eslint-disable-next-line global-require
           userPhoto: require('../../../images/avatar.png')
         };
     },
     methods: {
     },
     computed: {
+      ...mapGetters([
+        "auth/getUser"
+      ])
     },
 };
 </script>

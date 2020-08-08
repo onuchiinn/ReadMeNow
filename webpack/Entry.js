@@ -3,7 +3,6 @@ const fs   = require('fs');
 
 module.exports = class Entry {
     static PATH = path.resolve(__dirname, '../src/js');
-    // eslint-disable-next-line lines-between-class-members
     static EXT  = '.js';
 
     static create() {
