@@ -1,9 +1,9 @@
 <template lang="pug">
-section.profile
+section.profile(v-if="getUser")
   .profile__wrapper.container
     .profile__info
       img(:src="userPhoto" alt="profile-photo").profile__logo
-      .profile__name User
+      .profile__name {{getUser.email}}
       ul.profile__menu
         li
           a(href="#") МОИ КНИГИ
@@ -14,7 +14,7 @@ section.profile
 
 <script>
 import profileBooks from './profile-books.vue'
-import {mapActions, mapGetters} from 'vuex'
+import {mapGetters} from 'vuex'
 
 export default {
     components: {
@@ -22,15 +22,14 @@ export default {
     },
     data() {
         return {
-          userPhoto: require('../../../images/avatar.png')
+          userPhoto: require('../../../images/avatar.png'),
         };
     },
     methods: {
     },
     computed: {
-      ...mapGetters([
-        "auth/getUser"
-      ])
+      ...mapGetters(
+        "auth",["getUser"]),
     },
 };
 </script>

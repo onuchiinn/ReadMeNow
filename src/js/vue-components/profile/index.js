@@ -2,13 +2,12 @@ import Vue from "vue";
 import profileLayout from "./layout.vue";
 
 
-export default (selector, store) => {
-    const el = document.querySelector(selector);
-    const VueProfile = new Vue({
+export default (store) => {
+    new Vue({
+        el: "#vue-profile",
         store,
         render(h) {
             return h(profileLayout);
         },
     });
-    VueProfile.$mount(el);
 };

@@ -2,24 +2,33 @@
 .cardbook
   a(href="#").cardbook__link
     img(:src="cardbookImg" alt="cardbook-img").cardbook__img
-  .cardbook__author Р.П. Уоррен
-  a(href="#").cardbook__title Вся королевская рать
+  .cardbook__author {{book.author}}
+  a(href="#").cardbook__title {{book.title}}
 </template>
 
 <script>
+import {mapGetters} from 'vuex'
 
 export default {
     components: {
     },
     data() {
         return {
-            // eslint-disable-next-line global-require
-            cardbookImg: require('../../../images/cardbookImg.jpeg')
+          cardbookImg: require('../../../images/cardbookImg.jpeg')
         };
+    },
+    props: {
+      book: {
+        type: Object,
+        author:null,
+        title:null,
+      },
     },
     methods: {
     },
     computed: {
+          ...mapGetters(
+        "auth",["getBooks"]),
     },
 };
 </script>
