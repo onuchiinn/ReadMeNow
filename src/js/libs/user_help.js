@@ -3,6 +3,6 @@ export default class User {
     this.uid = user.uid
     this.login = user.displayName
     this.email = user.email
-    this.books = user.books
+    this.books = user.books || null
   }
 }

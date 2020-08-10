@@ -14,7 +14,7 @@ section.profile(v-if="getUser")
 
 <script>
 import profileBooks from './profile-books.vue'
-import {mapGetters} from 'vuex'
+import {mapGetters, mapActions} from 'vuex'
 
 export default {
     components: {
@@ -26,6 +26,8 @@ export default {
         };
     },
     methods: {
+      ...mapActions(
+        "auth",["findUser"]),
     },
     computed: {
       ...mapGetters(

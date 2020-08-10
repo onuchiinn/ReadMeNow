@@ -19,7 +19,6 @@ export default {
       const user = await firebase.auth().signInWithEmailAndPassword(email, password)
       dispatch('findUser', user.user)
       window.location.href = "/profile.html"
-      // dispatch('profile/getProfile')
     } catch (error) {
       throw error
     }
@@ -27,15 +26,9 @@ export default {
 
   async findUser({commit}, user) {
     try {
-      const db = await firebase.database().ref('profiles').once('value')
+      const db = await firebase.database().ref('profiles/' + user.uid).once('value')
       const people = db.val()
-      Object.keys(people).forEach(key => {
-        const profile = people[key]
-        if (profile.uid == user.uid) {
-          console.log(profile)
-          commit('SET_LOGIN', new User(profile))
-        }
-    })
+      commit('SET_LOGIN', new User(people))
   } catch (error) {
     throw error
   }
@@ -52,12 +45,22 @@ export default {
     try {
       await firebase.auth().createUserWithEmailAndPassword(email, password)
       .then ((user) => {
-        firebase.database().ref('profiles').push(new User(user.user))
+        firebase.database().ref('profiles/' + user.user.uid).set(new User(user.user))
       })
       console.log(`Успешная регистрация пользователя: ${email} `)
     } catch (error) {
       throw error
     }
   },
+
+
+  async addBook({dispatch}, {user, book}) {
+    try {
+      await firebase.database().ref('profiles/' + user.uid + '/books').push(book);
+      dispatch('findUser', user)
+  } catch (error) {
+    throw error
+  }
+},
 
 }

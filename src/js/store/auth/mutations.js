@@ -5,4 +5,8 @@ export default {
   CLEAR_LOGIN: (state) => {
     state.user = null
   },
+
+  ADD_NEW_BOOK: (state, books) => {
+    state.user.books.push(books)
+  },
 };
