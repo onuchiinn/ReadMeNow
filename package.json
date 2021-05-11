@@ -80,7 +80,7 @@
     "core-js": "^3.6.1",
     "firebase": "^7.17.1",
     "intersection-observer": "^0.7.0",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "noty": "^3.2.0-beta",
     "swiper": "^5.4.5",
     "vue": "^2.6.11",
