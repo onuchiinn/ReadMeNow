@@ -82,7 +82,7 @@
     "intersection-observer": "^0.7.0",
     "lodash": "^4.17.19",
     "noty": "^3.2.0-beta",
-    "swiper": "^5.4.5",
+    "swiper": "^6.5.1",
     "vue": "^2.6.11",
     "vuelidate": "^0.7.5",
     "vuex": "^3.5.1"
